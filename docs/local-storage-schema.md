@@ -42,7 +42,7 @@ Active task card data.
 | `title` | `string` | Yes | Task card title. |
 | `targetDate` | `string` | Yes | Target date for the card. Format: `YYYY-MM-DD`. |
 | `color` | `string` | Yes | Card background color. Example: `#ffffff`. |
-| `createdAt` | `string` | Yes | Task creation time. Generated with `toLocaleString()`. |
+| `createdAt` | `string` | Yes | Task creation time. Stored as an ISO 8601 string from `toISOString()`. |
 
 Example:
 
@@ -52,7 +52,7 @@ Example:
   "title": "Write README",
   "targetDate": "2026-06-13",
   "color": "#ffffff",
-  "createdAt": "6/13/2026, 9:30:00 PM"
+  "createdAt": "2026-06-13T13:30:00.000Z"
 }
 ```
 
@@ -67,7 +67,7 @@ Completed task record.
 | `targetDate` | `string` | Yes | Original target date. Format: `YYYY-MM-DD`. |
 | `color` | `string` | Yes | Original card background color. |
 | `createdAt` | `string` | Yes | Original task creation time. |
-| `completedAt` | `string` | Yes | Completion time. Generated with `toLocaleString()`. |
+| `completedAt` | `string` | Yes | Completion time. Stored as an ISO 8601 string from `toISOString()`. |
 
 Example:
 
@@ -77,8 +77,8 @@ Example:
   "title": "Write README",
   "targetDate": "2026-06-13",
   "color": "#ffffff",
-  "createdAt": "6/13/2026, 9:30:00 PM",
-  "completedAt": "6/13/2026, 10:00:00 PM"
+  "createdAt": "2026-06-13T13:30:00.000Z",
+  "completedAt": "2026-06-13T14:00:00.000Z"
 }
 ```
 
@@ -145,6 +145,10 @@ zh-TW
 ## Legacy Data
 
 Older task data may use `week` and `day` instead of `targetDate`.
+
+Older time fields may be saved as browser-formatted strings from
+`toLocaleString()`. The current app keeps those values unchanged when the
+browser cannot parse them as a date.
 
 | Field | Type | Description |
 | --- | --- | --- |

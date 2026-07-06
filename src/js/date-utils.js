@@ -50,6 +50,26 @@
         return `${year}-${month}-${day}`;
     }
 
+    function formatDateTime(value){
+
+        const date =
+            new Date(value);
+
+        if(Number.isNaN(date.getTime())){
+            return value || "";
+        }
+
+        return new Intl.DateTimeFormat("en-US", {
+            year:"numeric",
+            month:"numeric",
+            day:"numeric",
+            hour:"numeric",
+            minute:"2-digit",
+            second:"2-digit",
+            hour12:true
+        }).format(date);
+    }
+
     function isSameDate(dateA, dateB){
 
         return dateA.toDateString() ===
@@ -76,6 +96,7 @@
     const api = {
         getWeekDates,
         formatDate,
+        formatDateTime,
         isSameDate,
         getTwoWeekRangeLabel,
         getDefaultTaskDate

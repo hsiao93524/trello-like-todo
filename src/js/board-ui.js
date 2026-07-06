@@ -165,7 +165,8 @@
             </div>
 
             <div class="task-time">
-                ${context.t("task.createdAt")}${task.createdAt}
+                ${context.t("task.createdAt")}
+                ${context.dateUtils.formatDateTime(task.createdAt)}
             </div>
 
             <div class="task-buttons">
@@ -297,7 +298,7 @@
             color:"#ffffff",
 
             createdAt:
-                new Date().toLocaleString()
+                new Date().toISOString()
 
         });
 
@@ -351,7 +352,7 @@
         context.data.history.unshift({
             ...task,
             completedAt:
-                new Date().toLocaleString()
+                new Date().toISOString()
         });
 
         context.data.tasks =

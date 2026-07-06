@@ -6,14 +6,24 @@ Weekly Trello Local is a simple web-based todo.
 
 It helps users plan tasks by week, move cards between days like trello feature, and keep finished tasks in a history list. The app is built with plain HTML, CSS, and JavaScript, so it can run locally without a server.
 
+## Screenshot
+
+![Weekly Trello Local home screen](img/screenshot-home.png)
+
 ## Features
 
 - Show task cards for two weeks at the same time.
 - Navigate to previous or next weeks.
 - Add cards to a selected date.
+
+  ![Add a task demo](img/add-task.gif)
+
 - Drag and drop cards between day columns.
 - Edit card titles.
 - Change card colors.
+
+  ![Change card color demo](img/change-color.gif)
+
 - Mark cards as done.
 - Save completed cards in the history list.
 - Delete cards or history items.
@@ -55,4 +65,7 @@ This project is worked with Codex.
 
 - [ ] Merge Edit, Color, Done, Delete in the card to a menu or dropdown to shirnk the width of card.
 - [ ] Add `Today` button at the left of `previous week` button to jump to today's week
+- [ ] Support adding multiple cards at once.
+- [ ] Support adding a card by pressing Enter.
+- [ ] Add i18n messages for the created time label so it does not always show AM or PM text.
 - [x] Package JS files in the `src/js` folder.

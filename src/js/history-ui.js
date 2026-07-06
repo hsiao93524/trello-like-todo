@@ -32,7 +32,7 @@
             <br>
 
             ${context.t("history.completedAt")}
-            ${item.completedAt}
+            ${context.dateUtils.formatDateTime(item.completedAt)}
 
             <br><br>
 

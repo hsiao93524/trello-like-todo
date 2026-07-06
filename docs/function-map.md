@@ -83,6 +83,7 @@ Functions:
 
 - `getWeekDates(weekOffset)` - Return Monday to Sunday dates for a week.
 - `formatDate(date)` - Format a date as `YYYY-MM-DD`.
+- `formatDateTime(value)` - Format saved date-time values with fixed `en-US` AM/PM text.
 - `isSameDate(dateA, dateB)` - Check if two dates are the same calendar day.
 - `getTwoWeekRangeLabel(currentWeek)` - Return the visible two-week range label.
 - `getDefaultTaskDate()` - Return today's date for the task date input.
@@ -201,5 +202,6 @@ Main fields:
 Current test files:
 
 - `src/js/color-utils.test.js`
+- `src/js/date-utils.test.js`
 - `src/js/i18n-ui.test.js`
 - `src/js/file-split.test.js`
